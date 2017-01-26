@@ -1,0 +1,7 @@
+<form #addLinkForm="ngForm">
+    <input type="text" required name="title" placeholder="title" [(ngModel)]="link.title">
+    <input type="url" required name="url" placeholder="url" [(ngModel)]="link.url">
+    <input type="text" name="description" placeholder="description" [(ngModel)]="link.description">
+    <input type="text" required name="tags" placeholder="tags" [(ngModel)]="allTags">
+    <button md-button (click)="addLink(link, allTags)" [disabled]="!addLinkForm.valid">Submit</button>
+</form>

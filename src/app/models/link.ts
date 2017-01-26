@@ -5,7 +5,7 @@ export class Link {
     public title:string = "",
     public url:string = "",
     public description = "",
-    public picture = ""
+    public tags : string[] = []
   ){}
 
 }

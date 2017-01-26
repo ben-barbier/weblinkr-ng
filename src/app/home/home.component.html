@@ -1,17 +1,18 @@
-<md-input-container>
-  <input md-input placeholder="recherche" [(ngModel)]="searchText">
-</md-input-container>
-
-<md-list class="md-block">
-  <md-list-item *ngFor="let link of links | filterBy: searchText">
-    <md-card>
-      <md-card-title>{{link.title}}</md-card-title>
-      <md-card-content>
-        {{link.description}}
-        <md-chip-list>
-          <md-chip *ngFor="let tag of link.tags" color="primary">{{tag}}</md-chip>
-        </md-chip-list>
-      </md-card-content>
-    </md-card>
-  </md-list-item>
-</md-list>
+<md-grid-list cols="1">
+    <md-grid-tile>
+        <md-input-container>
+            <input md-input placeholder="recherche" [(ngModel)]="searchText">
+        </md-input-container>
+    </md-grid-tile>
+    <md-grid-tile>
+        <md-card style="margin-bottom: 2px;" *ngFor="let link of links | filterBy: searchText">
+            <md-card-title>{{link.title}}</md-card-title>
+            <md-card-content>
+                {{link.description}}
+                <md-chip-list>
+                    <md-chip *ngFor="let tag of link.tags" color="primary">{{tag}}</md-chip>
+                </md-chip-list>
+            </md-card-content>
+        </md-card>
+    </md-grid-tile>
+</md-grid-list>
