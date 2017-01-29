@@ -12,11 +12,11 @@ export class LinkService {
   }
 
   public get():Observable<Link[]> {
-    return this.http.get("http://localhost:8000/links").map((response:Response) => response.json());
+    return this.http.get("https://weblinkr-server.herokuapp.com/links").map((response:Response) => response.json());
   }
 
   public add(link:Link):Observable<Response> {
-    return this.http.post("http://localhost:8000/links", link);
+    return this.http.post("https://weblinkr-server.herokuapp.com/links", link);
   }
 
 }
