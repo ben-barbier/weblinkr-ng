@@ -5,7 +5,7 @@ import {Link} from "../models/link";
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
 

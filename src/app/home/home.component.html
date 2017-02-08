@@ -1,11 +1,16 @@
-<md-grid-list cols="1">
-    <md-grid-tile>
+<div class="container">
+    <div class="title">
+        <h1>WebLinkr</h1>
+    </div>
+
+    <div class="search">
         <md-input-container>
             <input md-input placeholder="recherche" [(ngModel)]="searchText">
         </md-input-container>
-    </md-grid-tile>
-    <md-grid-tile>
-        <md-card style="margin-bottom: 2px;" *ngFor="let link of links | filterBy: searchText">
+    </div>
+
+    <div class="list">
+        <md-card *ngFor="let link of links | filterBy: searchText">
             <md-card-title>{{link.title}}</md-card-title>
             <md-card-content>
                 {{link.description}}
@@ -14,5 +19,5 @@
                 </md-chip-list>
             </md-card-content>
         </md-card>
-    </md-grid-tile>
-</md-grid-list>
+    </div>
+</div>
