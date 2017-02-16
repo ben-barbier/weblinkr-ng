@@ -10,6 +10,7 @@ import {LinkService} from "./services/link.service";
 import {FilterByPipe} from './pipes/filter-by.pipe';
 import {LinkFormComponent} from './link-form/link-form.component';
 import {RouterModule, Routes} from '@angular/router';
+import {AuthService} from "./services/auth.service";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
         MaterialModule.forRoot()
     ],
     providers: [
-        LinkService
+        LinkService,
+        AuthService
     ],
     bootstrap: [AppComponent]
 })
